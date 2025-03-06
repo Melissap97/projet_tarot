@@ -9,8 +9,20 @@ h1 {
     color:white;
     padding-top: 100px;
     letter-spacing: .5rem;
-    font-weight: lighter;
+    
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start as invisible */
+    }
+    100% {
+      opacity: 1; /* End fully visible */
+    }
+  }
 
 .header {
     background: url("/header.png");
