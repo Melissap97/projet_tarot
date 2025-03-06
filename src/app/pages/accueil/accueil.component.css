@@ -4,12 +4,11 @@
     padding: 0;
 }
 
-h1 {
+.titre  {
     text-align: center;
     color:white;
     padding-top: 100px;
     letter-spacing: .5rem;
-    
     animation: fadeIn 2s ease-in-out forwards;
     opacity: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -24,8 +23,9 @@ h1 {
     }
   }
 
-.header {
+  .header {
     background: url("/header.png");
     background-size: cover;
     height: 80vh;
 }
+

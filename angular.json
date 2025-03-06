@@ -28,8 +28,9 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/app/pages/accueil/accueil.component.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              
             ],
             "scripts": []
           },
