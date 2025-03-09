@@ -9,8 +9,6 @@ import $ from 'jquery';
 
 export class AccueilComponent implements AfterViewInit {
 
-  @ViewChild('carouselDiv') carouselDiv!: ElementRef;
-
   constructor() {}
 
   ngAfterViewInit() {
@@ -38,19 +36,19 @@ export class AccueilComponent implements AfterViewInit {
       e.preventDefault();
     });
 
-    // Add click event to carousel divs
-    $('#carousel div').click((event: JQuery.ClickEvent) => {
-      this.moveToSelected($(event.currentTarget));
-    });
+    // Change from 'click' to 'mouseenter' and 'mouseleave' for hover effect
+    $('#carousel div').on('mouseenter', 
+      (event) => {
+        // Type casting event.currentTarget to HTMLElement
+        const target = event.currentTarget as HTMLElement;
+        this.moveToSelected($(target));
+      }).on('mouseleave', 
+      () => {
+        // Optional: Reset or perform any action on mouse leave
+        // You can add something here if needed when the mouse leaves the element
+      }
+    );
 
-    // Previous and Next buttons
-    $('#prev').click(() => {
-      this.moveToSelected('prev');
-    });
-
-    $('#next').click(() => {
-      this.moveToSelected('next');
-    });
   }
 
   private moveToSelected(element: JQuery<HTMLElement> | "next" | "prev"): void {
