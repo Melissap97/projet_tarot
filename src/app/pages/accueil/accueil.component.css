@@ -1,6 +1,7 @@
 ::ng-deep * {
   margin: 0;
   padding: 0;
+  
 }
 
 .titre {
@@ -10,6 +11,7 @@
   letter-spacing: .5rem;
   animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
+  justify-content: center;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -26,6 +28,17 @@
   background: url("/header.png");
   background-size: cover;
   height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  text-align: right;
+  padding-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  justify-content: right;
+
 }
 
 html, body, main {
@@ -33,6 +46,7 @@ html, body, main {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #0f0716;
 }
 /* General styling for each card */
 #carousel div {
@@ -108,4 +122,12 @@ html, body, main {
   transform: translateY(50%) translateX(-50%);
   width: 50px;
   height: 140px;
+}
+
+.container{
+  margin-top: 40px;
+}
+
+ footer {
+  color:white;
 }
