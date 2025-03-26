@@ -34,15 +34,6 @@ html, body, main {
   margin: 0;
   padding: 0;
 }
-
-#carousel {
-  position: relative;
-  height: 400px;
-  top: 50%;
-  transform: translateY(-50%);
-  overflow: hidden;
-}
-
 /* General styling for each card */
 #carousel div {
   position: absolute;
@@ -56,17 +47,17 @@ html, body, main {
 
 /* Hidden left */
 .hideLeft {
-  left: 25%;
+  left: 28%;  /* Adjusted for proper position */
   opacity: 0;
   transform: translateY(50%) translateX(-50%);
   width: 50px;
-  height: 80px;
+  height: 140px;
 }
 
 /* Slightly visible left */
 .prevLeftSecond {
   z-index: 4;
-  left: 25%;
+  left: 33%;  /* Adjusted for better positioning */
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
   width: 100px;
@@ -76,16 +67,16 @@ html, body, main {
 /* Previous position */
 .prev {
   z-index: 5;
-  left: 35%;
+  left: 40%;  /* Adjusted to start slightly to the left */
   transform: translateY(50px) translateX(-50%);
   width: 150px;
   height: 225px;
 }
 
-/* Selected (largest one in the middle) */
+/* Selected (this one should start in the center) */
 .selected {
   z-index: 10;
-  left: 50%;
+  left: 50%;  /* Centered */
   transform: translateY(0px) translateX(-50%);
   width: 200px;
   height: 300px;
@@ -94,7 +85,7 @@ html, body, main {
 /* Next position */
 .next {
   z-index: 5;
-  left: 65%;
+  left: 60%;  /* Adjusted to start slightly to the right */
   transform: translateY(50px) translateX(-50%);
   width: 150px;
   height: 225px;
@@ -103,18 +94,18 @@ html, body, main {
 /* Slightly visible right */
 .nextRightSecond {
   z-index: 4;
-  left: 75%;
+  left: 68%;  /* Adjusted for proper position */
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
   width: 100px;
   height: 150px;
 }
 
-/* Hidden right */
+/* Hidden right (now positioned closer to the center to make sure it's visible initially) */
 .hideRight {
-  left: 75%;
-  opacity: 0;
+  left: 73%;  /* Positioned slightly off-screen but within visible range */
+  opacity: 1;  /* Make sure it's visible */
   transform: translateY(50%) translateX(-50%);
   width: 50px;
-  height: 80px;
+  height: 140px;
 }
