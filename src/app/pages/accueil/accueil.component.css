@@ -1,18 +1,20 @@
 ::ng-deep * {
   margin: 0;
   padding: 0;
-  
 }
 
 .titre {
   text-align: center;
   color: white;
-  padding-top: 100px;
+  padding-top: 60px;
   letter-spacing: .5rem;
   animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
   justify-content: center;
   font-family: 'Times New Roman', Times, serif;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 35px;
 }
 
 @keyframes fadeIn {
@@ -25,9 +27,6 @@
 }
 
 .header {
-  background: url("/header.png");
-  background-size: cover;
-  height: 80vh;
   display: flex;
   justify-content: center;
 }
@@ -41,13 +40,28 @@ h2 {
 
 }
 
-html, body, main {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #0f0716;
+body {
+background: url("/header.png");
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
 }
+
+
+main {
+  flex-grow: 1;
+}
+
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ensure enough space for the cards */
+  display: flex;
+  justify-content: center; /* Keeps the cards horizontally centered */
+  align-items: flex-end; /* Aligns all cards at the bottom */
+}
+
 /* General styling for each card */
 #carousel div {
   position: absolute;
@@ -57,77 +71,20 @@ html, body, main {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  bottom: 0; /* Aligns all cards at the bottom of #carousel */
+  margin-bottom: 40px; 
 }
 
-/* Hidden left */
-.hideLeft {
-  left: 28%;  /* Adjusted for proper position */
-  opacity: 0;
-  transform: translateY(50%) translateX(-50%);
-  width: 50px;
-  height: 140px;
-}
+/* Adjust the positions as needed */
+.hideLeft { left: 25%; opacity: 0; width: 50px; height: 90px; }
+.prevLeftSecond { left: 27%; z-index: 4; opacity: 0.7; width: 100px; height: 170px; }
+.prev { left: 32%; z-index: 5; width: 150px; height: 250px; }
+.selected { left: 50%; z-index: 10; width: 200px; height: 300px; transform: translateX(-50%); }
+.next { left: 55%; z-index: 5; width: 150px; height: 250px; }
+.nextRightSecond { left: 65%; z-index: 4; opacity: 0.7; width: 100px; height: 170px; }
+.hideRight { left: 73%; opacity: 0; width: 50px; height: 90px; }
 
-/* Slightly visible left */
-.prevLeftSecond {
-  z-index: 4;
-  left: 33%;  /* Adjusted for better positioning */
-  transform: translateY(50%) translateX(-50%);
-  opacity: 0.7;
-  width: 100px;
-  height: 150px;
-}
-
-/* Previous position */
-.prev {
-  z-index: 5;
-  left: 40%;  /* Adjusted to start slightly to the left */
-  transform: translateY(50px) translateX(-50%);
-  width: 150px;
-  height: 225px;
-}
-
-/* Selected (this one should start in the center) */
-.selected {
-  z-index: 10;
-  left: 50%;  /* Centered */
-  transform: translateY(0px) translateX(-50%);
-  width: 200px;
-  height: 300px;
-}
-
-/* Next position */
-.next {
-  z-index: 5;
-  left: 60%;  /* Adjusted to start slightly to the right */
-  transform: translateY(50px) translateX(-50%);
-  width: 150px;
-  height: 225px;
-}
-
-/* Slightly visible right */
-.nextRightSecond {
-  z-index: 4;
-  left: 68%;  /* Adjusted for proper position */
-  transform: translateY(50%) translateX(-50%);
-  opacity: 0.7;
-  width: 100px;
-  height: 150px;
-}
-
-/* Hidden right (now positioned closer to the center to make sure it's visible initially) */
-.hideRight {
-  left: 73%;  /* Positioned slightly off-screen but within visible range */
-  opacity: 1;  /* Make sure it's visible */
-  transform: translateY(50%) translateX(-50%);
-  width: 50px;
-  height: 140px;
-}
-
-.container{
-  margin-top: 40px;
-}
-
- footer {
-  color:white;
+footer {
+  color: white;
+  text-align: center;
 }
