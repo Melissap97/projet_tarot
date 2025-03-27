@@ -1,0 +1,47 @@
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  /* Sidebar Links */
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    background: #575757;
+  }
+  
+  /* Hamburger Button */
+  .hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .hamburger:focus {
+    outline: none;
+  }
+  
