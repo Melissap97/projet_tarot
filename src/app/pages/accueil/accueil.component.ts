@@ -74,7 +74,9 @@ export class AccueilComponent implements AfterViewInit {
     $(nextSecond).removeClass().addClass("nextRightSecond");
     $(prevSecond).removeClass().addClass("prevLeftSecond");
 
-    $(nextSecond).nextAll().removeClass().addClass('hideRight');
+    $(nextSecond).nextAll().removeClass('hideRight').addClass('hideRight');
     $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
   }
+  
 }
