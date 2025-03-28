@@ -3,11 +3,11 @@ import $ from 'jquery';
 
 @Component({
   selector: 'app-carousel',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.css']
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.css']
 })
 
-export class AccueilComponent implements AfterViewInit {
+export class CarouselComponent implements AfterViewInit {
 
   constructor() {}
 
@@ -74,7 +74,7 @@ export class AccueilComponent implements AfterViewInit {
     $(nextSecond).removeClass().addClass("nextRightSecond");
     $(prevSecond).removeClass().addClass("prevLeftSecond");
 
-    $(nextSecond).nextAll().removeClass('hideRight').addClass('hideRight');
+    $(nextSecond).nextAll().removeClass().addClass('hideRight');
     $(prevSecond).prevAll().removeClass().addClass('hideLeft');
 
   }

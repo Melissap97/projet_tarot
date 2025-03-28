@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { AccueilComponent } from './pages/accueil/accueil.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { CarouselComponent } from './pages/accueil/carousel/carousel.component';
 
 export const routes: Routes = [{
 
@@ -9,7 +9,7 @@ export const routes: Routes = [{
         pathMatch: 'full'
     },{
         path: "accueil",
-        component: AccueilComponent,
+        component: CarouselComponent,
        },
        {
         path: '**',

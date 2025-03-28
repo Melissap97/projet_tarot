@@ -19,6 +19,8 @@
   display: flex;
   justify-content: center; /* Keeps the cards horizontally centered */
   align-items: flex-end; /* Aligns all cards at the bottom */
+  
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* General styling for each card */
