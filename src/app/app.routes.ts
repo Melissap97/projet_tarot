@@ -10,8 +10,8 @@ export const routes: Routes = [{
     },{
         path: "accueil",
         component: CarouselComponent,
-       },
-       {
+    },
+    {
         path: '**',
         component: NotFoundComponent,
     }
