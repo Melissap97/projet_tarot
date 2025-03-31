@@ -9,6 +9,7 @@
     color: white;
     transition: left 0.3s ease-in-out;
     padding-top: 110px;
+
   }
   
   .sidebar.active {
@@ -16,16 +17,19 @@
   }
   
   /* Sidebar Links */
-  .sidebar a {
+  .sidebar p {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 20px 20px 20px 30px;
     font-size: 18px;
+    
   }
   
-  .sidebar a:hover {
+  .sidebar p:hover {
     background: #381f6170;
+    cursor: pointer;
+
   }
   
   /* Hamburger Button */

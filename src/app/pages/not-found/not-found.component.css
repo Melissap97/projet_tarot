@@ -1,0 +1,25 @@
+h1{
+    color:white;
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+p{
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+@media (min-width: 1900px) {
+    h1 {
+    padding-top:200px;
+    font-size: 50px;
+    }
+}

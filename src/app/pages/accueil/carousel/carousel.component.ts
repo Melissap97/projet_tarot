@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import $ from 'jquery';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-carousel',
@@ -9,7 +10,13 @@ import $ from 'jquery';
 
 export class CarouselComponent implements AfterViewInit {
 
-  constructor() {}
+  
+
+  constructor( private title: Title) { }
+    ngOnInit(): void {
+      // Définir dynamiquement le titre de la page
+      this.title.setTitle('✦ Accueil ✦ Projet Tarot ✦');
+    }
 
   ngAfterViewInit() {
     // Initialize carousel after view is initialized

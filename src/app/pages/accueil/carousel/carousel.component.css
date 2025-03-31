@@ -32,7 +32,7 @@
 
 /* Adjust the positions as needed */
 .hideLeft { 
-  left: 25%; 
+  left: 24%; 
   opacity: 0;
   width: 50px;
   height: 90px; 
@@ -88,7 +88,60 @@
 @media (min-width: 1900px) {
   
     #carousel {
-      margin-top:100px;
+      margin-top:180px;
+    }
+
+    .hideLeft { 
+      left: 14%; 
+      opacity: 0;
+      width: 90px;
+      height: 175px; 
+      z-index: 0;
+    }
+    
+    .prevLeftSecond {
+      left: 20%; 
+      z-index: 4; 
+      opacity: 0.7; 
+      width: 150px; 
+      height: 270px; 
+    }
+    
+    .prev { 
+      left: 28%; 
+      z-index: 5; 
+      width: 200px; 
+      height: 350px; 
+    }
+    
+    .selected { 
+      left: 50%; 
+      z-index: 10; 
+      width: 250px; 
+      height: 400px; 
+      transform: translateX(-50%); 
+    }
+    
+    .next { 
+      left: 54%; 
+      z-index: 5; 
+      width: 200px; 
+      height: 350px; 
+    }
+    
+    .nextRightSecond { 
+      left: 66%; 
+      z-index: 4; 
+      opacity: 0.7; 
+      width: 150px; 
+      height: 270px; 
+    }
+    
+    .hideRight { 
+      left: 76%; 
+      opacity: 0; 
+      width: 90px; 
+      height: 175px; 
+      z-index: 0;
     }
   }
-  

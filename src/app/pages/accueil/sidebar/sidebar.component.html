@@ -1,9 +1,10 @@
 <button class="hamburger" (click)="toggleSidebar()">☰</button>
 
 <div class="sidebar" [class.active]="isSidebarOpen">
-  <a href="#">Connexion</a>
-  <a href="#">Origine du tarot</a>
-  <a href="#">Collection </a>
-  <a href="#">Mes tirages</a>
-  <a href="#">Devenir membre</a>
+  <p (click)="pageAccueil()"> Accueil</p>
+  <p (click)="pageConnexion()">Connexion</p>
+  <p (click)="pageTirages()"> Mes tirages</p>
+  <p (click)="pageOrigineTarot()"> Origine du tarot</p>
+  <p (click)="pageCollection()"> Collection </p>
+  <p (click)="pagePremium()"> Devenir premium</p>
 </div>
