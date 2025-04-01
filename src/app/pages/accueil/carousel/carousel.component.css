@@ -17,6 +17,7 @@
   animation: fadeIn 2s ease-in-out forwards;
 }
 
+
 /* General styling for each card */
 #carousel div {
   position: absolute;
@@ -39,6 +40,10 @@
   z-index: 0;
 }
 
+.hideLeft:hover{
+  cursor: pointer;
+}
+
 .prevLeftSecond {
   left: 27%; 
   z-index: 4; 
@@ -47,11 +52,19 @@
   height: 170px; 
 }
 
+.prevLeftSecond:hover{
+  cursor: pointer;
+}
+
 .prev { 
   left: 32%; 
   z-index: 5; 
   width: 150px; 
   height: 250px; 
+}
+
+.prev:hover{
+  cursor: pointer;
 }
 
 .selected { 
@@ -62,11 +75,19 @@
   transform: translateX(-50%); 
 }
 
+.selected:hover{
+  cursor: pointer;
+}
+
 .next { 
   left: 55%; 
   z-index: 5; 
   width: 150px; 
   height: 250px; 
+}
+
+.next:hover{
+  cursor: pointer;
 }
 
 .nextRightSecond { 
@@ -77,6 +98,10 @@
   height: 170px; 
 }
 
+.nextRightSecond:hover{
+  cursor: pointer;
+}
+
 .hideRight { 
   left: 73%; 
   opacity: 0; 
@@ -85,6 +110,40 @@
   z-index: 0;
 }
 
+.hideRight:hover{
+  cursor: pointer;
+}
+
+#tirage-info{
+  color:aliceblue;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    z-index: 1000; /* Ensures it's above other elements */
+   
+}
+
+#tirage-info img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+#carousel {
+  position: relative; /* Ensures #tirage-info is positioned relative to it */
+}
+
+/* Show the overlay when tirageInfo exists */
+.show-info {
+  display: block 
+}
 @media (min-width: 1900px) {
   
     #carousel {
@@ -98,6 +157,10 @@
       height: 175px; 
       z-index: 0;
     }
+
+    .hideLeft:hover{
+      cursor: pointer;
+    }
     
     .prevLeftSecond {
       left: 20%; 
@@ -107,11 +170,19 @@
       height: 270px; 
     }
     
+    .prevLeftSecond:hover{
+      cursor: pointer;
+    }
+
     .prev { 
       left: 28%; 
       z-index: 5; 
       width: 200px; 
       height: 350px; 
+    }
+
+    .prev:hover{
+      cursor: pointer;
     }
     
     .selected { 
@@ -121,12 +192,20 @@
       height: 400px; 
       transform: translateX(-50%); 
     }
+
+    .selected:hover{
+      cursor: pointer;
+    }
     
     .next { 
       left: 54%; 
       z-index: 5; 
       width: 200px; 
       height: 350px; 
+    }
+
+    .next:hover{
+      cursor: pointer;
     }
     
     .nextRightSecond { 
@@ -136,6 +215,10 @@
       width: 150px; 
       height: 270px; 
     }
+
+    .nextRightSecond:hover{
+      cursor: pointer;
+    }
     
     .hideRight { 
       left: 76%; 
@@ -143,5 +226,9 @@
       width: 90px; 
       height: 175px; 
       z-index: 0;
+    }
+
+    .nextRightSecond:hover{
+      cursor: pointer;
     }
   }

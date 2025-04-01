@@ -1,16 +1,33 @@
 <div id="carousel">
-    <div class="hideLeft"></div>
-    <div class="hideLeft"></div>
-    <div class="hideLeft"></div>
-    <div class="hideLeft"></div>
-    <div class="hideLeft"></div>
-    <div class="prevLeftSecond"></div>
-    <div class="selected"></div>
-    <div class="prev"></div>
-    <div class="next"></div>
-    <div class="nextRightSecond"></div>
-    <div class="hideRight"></div>
-    <div class="hideRight"></div>
-    <div class="hideRight"></div>
-    <div class="hideRight"></div>
+    <div class="hideLeft" (click)="postTirage()"></div>
+    <div class="hideLeft" (click)="postTirage()"></div>
+    <div class="hideLeft" (click)="postTirage()"></div>
+    <div class="hideLeft" (click)="postTirage()"></div>
+    <div class="hideLeft" (click)="postTirage()"></div>
+    <div class="prevLeftSecond" (click)="postTirage()"></div>
+    <div class="selected" (click)="postTirage()"></div>
+    <div class="prev" (click)="postTirage()"></div>
+    <div class="next" (click)="postTirage()"></div>
+    <div class="nextRightSecond" (click)="postTirage()"></div>
+    <div class="hideRight" (click)="postTirage()"></div>
+    <div class="hideRight" (click)="postTirage()"></div>
+    <div class="hideRight" (click)="postTirage()"></div>
+    <div class="hideRight" (click)="postTirage()"></div>
 </div>
+
+<div id="tirage-info" *ngIf="tirageInfo.id">
+    <h3>Tirage Information</h3>
+    <p><strong>ID:</strong> {{ tirageInfo.id }}</p>
+    <p><strong>Utilisateur ID:</strong> {{ tirageInfo.utilisateur_id }}</p>
+    <p><strong>Carte ID:</strong> {{ tirageInfo.carte_id }}</p>
+    <p><strong>Created At:</strong> {{ tirageInfo.createdAt }}</p>
+    <p><strong>Carte Nom:</strong> {{ tirageInfo.carte_nom }}</p>
+    <p><strong>Carte Signification:</strong> {{ tirageInfo.carte_signification }}</p>
+    <p><strong>Carte Image:</strong></p>
+    <img [src]="tirageInfo.carte_image" alt="Carte Image" *ngIf="tirageInfo.carte_image">
+    <p><strong>Carte Premium Nom:</strong> {{ tirageInfo.carte_premium_nom }}</p>
+    <p><strong>Carte Premium Signification:</strong> {{ tirageInfo.carte_premium_signification }}</p>
+    <p><strong>Carte Premium Image:</strong></p>
+    <img [src]="tirageInfo.carte_premium_image" alt="Carte Premium Image" *ngIf="tirageInfo.carte_premium_image">
+  </div>
+
