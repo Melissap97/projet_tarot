@@ -115,25 +115,36 @@
 }
 
 #tirage-info{
-  color:aliceblue;
   position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    background: #1b0e2ac7;
     color: white;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
-    max-width: 600px;
+    max-width: 90%;
+    max-height: 95%;
     text-align: center;
     z-index: 1000; /* Ensures it's above other elements */
-   
+    display:flex
+  
 }
 
 #tirage-info img {
-  max-width: 100%;
-  border-radius: 5px;
+  width: 350px;
+  margin: 35px;
+}
+
+.tirage-image {
+
+  width:fit-content;
+}
+
+.tirage-signification {
+  width:40%;
+
 }
 
 #carousel {
@@ -144,6 +155,11 @@
 .show-info {
   display: block 
 }
+
+h2{
+  text-align: center;
+}
+
 @media (min-width: 1900px) {
   
     #carousel {
