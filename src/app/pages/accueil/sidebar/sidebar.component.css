@@ -8,8 +8,7 @@
     background: #1c0f2bb9;
     color: white;
     transition: left 0.3s ease-in-out;
-    padding-top: 110px;
-
+    padding-top: 90px;
   }
   
   .sidebar.active {
@@ -21,7 +20,7 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 20px 20px 20px 30px;
+    padding: 15px 15px 15px 30px;
     font-size: 18px;
     
   }

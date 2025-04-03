@@ -4,7 +4,7 @@ import { CarouselComponent } from './pages/accueil/carousel/carousel.component';
 import { ConnexionComponent } from './pages/connexion/connexion/connexion.component';
 import { TiragesComponent } from './pages/tirages/tirages.component';
 import { OrigineTarotComponent } from './pages/origine-tarot/origine-tarot.component';
-import { CollectionComponent } from './pages/collection/collection.component';
+import { GalerieComponent } from  './pages/galerie/galerie.component';
 import { PremiumComponent } from './pages/premium/premium.component';
 
 export const routes: Routes = [{
@@ -29,8 +29,8 @@ export const routes: Routes = [{
         component: OrigineTarotComponent,
     },
     {
-        path: "collection",
-        component: CollectionComponent,
+        path: "galerie",
+        component: GalerieComponent,
     },
     {
         path: "premium",

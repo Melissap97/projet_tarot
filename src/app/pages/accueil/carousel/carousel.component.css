@@ -114,37 +114,42 @@
   cursor: pointer;
 }
 
-#tirage-info{
+#tirage-info {
   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #1b0e2ac7;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 50%;
-    max-width: 90%;
-    max-height: 95%;
-    text-align: center;
-    z-index: 1000; /* Ensures it's above other elements */
-    display:flex
-  
-}
-
-#tirage-info img {
-  width: 350px;
-  margin: 35px;
-}
-
-.tirage-image {
-
-  width:fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #170a25f3;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 100%;
+  max-height: 90%;
+  text-align: left; /* Align text to the left for better readability */
+  z-index: 1000; 
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Add space between text and image */
+  margin: 10px;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .tirage-signification {
-  width:40%;
+  width: 60%; /* Increase width to allow more text space */
+  font-size: small;
+}
 
+.tirage-signification p {
+  white-space: pre-line;
+}
+
+.tirage-image img {
+  width: 230px;
+  height: auto;
+  max-width: 100%;
 }
 
 #carousel {
@@ -158,6 +163,8 @@
 
 h2{
   text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 1900px) {
@@ -247,4 +254,40 @@ h2{
     .nextRightSecond:hover{
       cursor: pointer;
     }
+
+    #tirage-info{
+      position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #170a25f3;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+        max-width: 90%;
+        max-height: 90%;
+        text-align: center;
+        z-index: 1000; /* Ensures it's above other elements */
+        display:flex
+      
+    }
+    
+    #tirage-info img {
+      width: 350px;
+      margin: 20px;
+      padding-left: 40px;
+    }
+    
+    .tirage-image {
+      width: 350px;
+      margin: 35px;
+      padding-left: 50px;
+      width:fit-content;
+    }
+    
+    .tirage-signification {
+      width:40%;
+    }
+    
   }

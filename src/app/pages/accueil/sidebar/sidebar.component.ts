@@ -27,8 +27,8 @@ private router = inject(Router);
   pageOrigineTarot () {
     this.router.navigate(["/origine"]); 
   }
-  pageCollection () {
-    this.router.navigate(["/collection"]); 
+  pageGalerie () {
+    this.router.navigate(["/galerie"]); 
   }
   pagePremium () {
     this.router.navigate(["/premium"]); 
