@@ -28,6 +28,8 @@ export class CarouselComponent implements AfterViewInit {
     carte_premium_image:'',
     carte_premium_signification:''
   }
+
+
   constructor( private title: Title, private tiragesService: TiragesService, private NgZone: NgZone) { }
     ngOnInit(): void {
       // Définir dynamiquement le titre de la page
@@ -122,6 +124,22 @@ export class CarouselComponent implements AfterViewInit {
         console.error('Error fetching tirage:', err);
       }
     });
+  }
+
+  closeTirageInfo(): void {
+    this.tirageInfo = {
+      id: '',
+      utilisateur_id: '',
+      carte_id: '',
+      createdAt: '',
+      carte_nom: '',
+      carte_signification: '',
+      carte_image: '',
+      carte_premium_id: '',
+      carte_premium_nom: '',
+      carte_premium_image: '',
+      carte_premium_signification: ''
+    };
   }
 }
 
