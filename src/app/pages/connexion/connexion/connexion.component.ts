@@ -19,8 +19,9 @@ export class ConnexionComponent {
   connexionService: ConnexionService;
 
   constructor( private title: Title, private fb: FormBuilder, private http: HttpClient, private router: Router, connexionService: ConnexionService) {
-    // ✅ Initialisation dans le constructeur
+    // Initialisation dans le constructeur
     this.loginForm = this.fb.group({
+      nom: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
@@ -32,14 +33,28 @@ export class ConnexionComponent {
       this.title.setTitle('✦ Connexion ✦ Projet Tarot ✦');
     }
     onSubmit() {
-      if (this.loginForm.valid) {
-        this.connexionService.login(this.loginForm).subscribe({
-          next: () => this.router.navigate(['todos']),
-          error: (err: any) => this.errorMessage = err.error.message || 'Erreur de connexion'
-        });
-      }
-    }
-  
+  if (this.loginForm.valid) {
+    this.connexionService.login(this.loginForm).subscribe({
+      next: (response) => {
+        console.log('Login successful, saving token...');
+        
+        // Assuming the token is in the response
+        const token = response?.token; // Make sure the token field matches your API response
+        if (token) {
+          localStorage.setItem('token', token);
+          console.log('Token saved:', token);
+        }
 
+        // Navigate to the home page after login
+        this.router.navigate(['/accueil']);
+      },
+      error: (err: any) => {
+        this.errorMessage = err.error.message || 'Erreur de connexion';
+      }
+    });
+  }
+}
+
+  
     
 }

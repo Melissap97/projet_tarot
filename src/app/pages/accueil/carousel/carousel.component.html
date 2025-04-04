@@ -20,7 +20,7 @@
     <div class="hideRight" (click)="postTirage()"></div>
 </div>
 
-<div id="tirage-info" *ngIf="tirageInfo.carte_nom || tirageInfo.carte_premium_nom">
+<div id="tirage-info" *ngIf="tirageInfo && (tirageInfo.carte_nom || tirageInfo.carte_premium_nom)">
 
     <div class="tirage-signification">
     <h2 *ngIf="tirageInfo.carte_nom">{{ tirageInfo.carte_nom }}</h2>
