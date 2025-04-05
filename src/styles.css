@@ -37,14 +37,6 @@
     justify-content: center;
   }
   
-  h2 {
-    color: white;
-    text-align: right;
-    padding-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: right;
-  
-  }
   
   body {
   background: url("/header.png");

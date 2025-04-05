@@ -1,3 +1,4 @@
+import { UsersService } from './../../../services/users.service';
 import { TiragesService } from './../../../services/tirages.service';
 import { Component, AfterViewInit, NgZone } from '@angular/core';
 import $ from 'jquery';
@@ -14,6 +15,7 @@ import { Observable } from 'rxjs';
 })
 
 export class CarouselComponent implements AfterViewInit {
+  userInfo: any;
   tirage = new Array<any>();
   tirageInfo = {
     id: '',
@@ -30,11 +32,23 @@ export class CarouselComponent implements AfterViewInit {
   }
 
 
-  constructor( private title: Title, private tiragesService: TiragesService, private NgZone: NgZone) { }
+  constructor( private title: Title, private tiragesService: TiragesService,private usersService: UsersService, private NgZone: NgZone) { }
     ngOnInit(): void {
       // Définir dynamiquement le titre de la page
       this.title.setTitle('✦ Accueil ✦ Projet Tarot ✦');
-    }
+
+      // Récupération de l'information de l'utilisateur
+      this.usersService.getUserInfo().subscribe({
+        next: (data) => {
+          this.userInfo = data;  // Store user info for use in the template
+        },
+        error: (error) => {
+           // Handle errors (e.g., not authenticated, no token)
+          console.error('Error fetching user info:', error);
+        }
+      }
+    );
+  }
 
   ngAfterViewInit() {
     // Initialize carousel after view is initialized

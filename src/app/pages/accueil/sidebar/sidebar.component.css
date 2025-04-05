@@ -9,6 +9,7 @@
     color: white;
     transition: left 0.3s ease-in-out;
     padding-top: 90px;
+    z-index: 999;
   }
   
   .sidebar.active {
@@ -22,11 +23,18 @@
     text-decoration: none;
     padding: 15px 15px 15px 30px;
     font-size: 18px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 0px;
+    text-align: left; 
+    font-style: italic;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
     
   }
   
   .sidebar p:hover {
-    background: #381f6170;
+    background: #381f6197;
     cursor: pointer;
 
   }

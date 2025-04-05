@@ -1,3 +1,10 @@
+<header>
+    <div class="userInfo" *ngIf="userInfo">Bienvenue, {{  userInfo.nom }}.</div>
+    <div class="userInfo" *ngIf="!userInfo">Connectez-vous pour enregistrer vos tirages.</div>
+</header>
+
+<h2>Sélectionnez une carte.</h2>
+
 <div id="carousel">
     <div class="hideLeft" (click)="postTirage()"></div>
     <div class="hideLeft" (click)="postTirage()"></div>
@@ -23,8 +30,8 @@
 <div id="tirage-info" *ngIf="tirageInfo && (tirageInfo.carte_nom || tirageInfo.carte_premium_nom)">
 
     <div class="tirage-signification">
-    <h2 *ngIf="tirageInfo.carte_nom">{{ tirageInfo.carte_nom }}</h2>
-    <h2 *ngIf="tirageInfo.carte_premium_nom">{{ tirageInfo.carte_premium_nom }}</h2>
+    <h3 *ngIf="tirageInfo.carte_nom">{{ tirageInfo.carte_nom }}</h3>
+    <h3 *ngIf="tirageInfo.carte_premium_nom">{{ tirageInfo.carte_premium_nom }}</h3>
     <p>{{ tirageInfo.carte_signification }}</p>
     <p>{{ tirageInfo.carte_premium_signification }}</p>
     </div>
