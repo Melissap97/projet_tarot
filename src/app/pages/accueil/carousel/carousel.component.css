@@ -25,7 +25,14 @@
   left: 150px;
   color: white;
   font-family: 'Times New Roman', Times, serif;
+}
 
+span{
+  text-decoration: underline;
+}
+.userLoggedOff{
+  cursor: pointer;
+  
 }
 
 #carousel {

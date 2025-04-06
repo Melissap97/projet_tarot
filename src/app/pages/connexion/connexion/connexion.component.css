@@ -3,11 +3,21 @@ h2, label{
     margin-bottom: 10px;
 }
 
+p{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20%;
+    font-size: 24px;
+    color: white;
+    
+}
+
 h2 {
-    padding:0;
+    padding:0px;
+    margin:0px;
     text-shadow: rgb(255, 255, 255) 1px 0 10px;
     animation: fadeIn 1s ease-in-out forwards;
     text-align: center;
+    font-style: normal;
 }
 
 .container {

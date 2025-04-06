@@ -1,6 +1,8 @@
 <header>
-    <div class="userInfo" *ngIf="userInfo">Bienvenue, {{  userInfo.nom }}.</div>
-    <div class="userInfo" *ngIf="!userInfo">Connectez-vous pour enregistrer vos tirages.</div>
+    <div class="userInfo">
+    <div class="userLoggedIn" *ngIf="userInfo">Bienvenue, {{  userInfo.nom }}.</div>
+    <div class="userLoggedOff" *ngIf="!userInfo" (click)="pageConnexion()"><span>Connectez-vous</span> pour enregistrer vos tirages.</div>
+    </div>
 </header>
 
 <h2>Sélectionnez une carte.</h2>

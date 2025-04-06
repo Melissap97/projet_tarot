@@ -1,10 +1,11 @@
 import { UsersService } from './../../../services/users.service';
 import { TiragesService } from './../../../services/tirages.service';
-import { Component, AfterViewInit, NgZone } from '@angular/core';
+import { Component, AfterViewInit, NgZone, inject } from '@angular/core';
 import $ from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -114,6 +115,11 @@ export class CarouselComponent implements AfterViewInit {
   
   //Reqûetes API
 
+  private router = inject(Router);
+  pageConnexion () {
+    this.router.navigate(["/connexion"]); 
+  }
+  
   postTirage(): void {
     this.tiragesService.createTirage().subscribe({
       next: (response) => {
