@@ -1,0 +1,18 @@
+h3 {
+    color:white;
+}
+
+.tirageUser{
+    color: white;
+    font-size: 20px;
+    
+}
+
+.image{
+    width: 100px;
+}
+
+.container {
+    height:  80vh; /* Or your desired height */
+    overflow-y: scroll;
+}

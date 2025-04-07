@@ -25,6 +25,11 @@ export class InscriptionComponent {
     });
   }
 
+  ngOnInit(): void {
+    // Définir dynamiquement le titre de la page
+    this.title.setTitle('✦ Inscription ✦ Projet Tarot ✦');
+  }
+
   onSubmit() {
     if (this.registerForm.valid) {
       this.connexionService.register(this.registerForm.value).subscribe({

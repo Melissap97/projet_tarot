@@ -1,1 +1,20 @@
-<p>tirages works!</p>
+<div class="container"><div *ngIf="tirages?.length">
+    <h3>Vos Tirages:</h3>
+    <div class="tirageUser">
+    <ul>
+      <li *ngFor="let tirage of tirages">
+        <h4>{{ tirage.carte_nom }} {{ tirage.carte_premium_nom }}</h4>
+        <p>Fait le: {{tirage.createdAt}} ,</p>
+        <p>{{ tirage.carte_signification }} {{tirage.carte_premium_signification}}</p>
+        
+    </li>
+    </ul>
+</div>
+
+  <div *ngIf="!tirages?.length">
+    <p>Vous n'avez fait aucun tirage.</p>
+</div>
+
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>
+</div>

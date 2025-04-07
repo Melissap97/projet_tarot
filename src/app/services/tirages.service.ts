@@ -16,8 +16,10 @@ export class TiragesService {
     const url = `${this.baseUrl}/nouveauTirage`; // Append the specific endpoint
     return this.http.post(url, {}, { withCredentials: true });
   }
-/*public createTodo(todoData: { task: string }): Observable<any> {
-  return this.httpClient.post(this.url + this.path, todoData, { withCredentials: true });
-}*/
+
+  public getTirageParUser(): Observable<any> {
+    const url = `${this.baseUrl}/tirageParUser`; // Append the specific endpoint
+    return this.http.get(url, { withCredentials: true });
+  }
 
 }

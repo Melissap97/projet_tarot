@@ -56,3 +56,8 @@
     outline: none;
   }
   
+  @media (min-width: 1900px) {
+    .sidebar p {
+      font-size: 25px;
+    }
+  }
