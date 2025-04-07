@@ -331,7 +331,8 @@ h2{
         max-height: 90%;
         text-align: center;
         z-index: 1000; /* Ensures it's above other elements */
-        display:flex
+        display:flex;
+        text-align: left;
         
       
     }
