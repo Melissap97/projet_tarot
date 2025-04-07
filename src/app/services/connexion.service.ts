@@ -17,7 +17,7 @@ export class ConnexionService {
     return this.httpClient.post(this.url + this.path + '/login', loginForm.value, { withCredentials: true })
   }
 
-  public register(userData: { name: string; email: string; password: string}): Observable<any> {
+  public register(userData: { nom: string; email: string; password: string}): Observable<any> {
     return this.httpClient.post(this.url + this.path + '/register', userData);
   }
 }

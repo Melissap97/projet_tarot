@@ -6,6 +6,7 @@ import { TiragesComponent } from './pages/tirages/tirages.component';
 import { OrigineTarotComponent } from './pages/origine-tarot/origine-tarot.component';
 import { GalerieComponent } from  './pages/galerie/galerie.component';
 import { PremiumComponent } from './pages/premium/premium.component';
+import { InscriptionComponent } from './pages/connexion/inscription/inscription.component';
 
 export const routes: Routes = [{
 
@@ -19,6 +20,10 @@ export const routes: Routes = [{
     {
         path: "connexion",
         component: ConnexionComponent,
+    },
+    {
+        path: "inscription",
+        component: InscriptionComponent,
     },
     {
         path: "tirages",

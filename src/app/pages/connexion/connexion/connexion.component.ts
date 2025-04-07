@@ -55,6 +55,7 @@ export class ConnexionComponent {
   }
 }
 
-  
-    
+  pageInscription () {
+    this.router.navigate(["/inscription"]); 
+  }
 }
