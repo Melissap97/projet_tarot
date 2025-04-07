@@ -33,5 +33,16 @@ export class TiragesComponent {
     });
   }
 
-
+deleteTirage(id: number): void {
+    this.tiragesService.deleteTirage(id).subscribe({
+      next: (response) => {
+        // Remove the deleted tirage from the list
+        this.tirages = this.tirages.filter(tirage => tirage.id !== id);
+      },
+      error: (err) => {
+        console.error('Error deleting tirage:', err);
+        this.errorMessage = 'Erreur lors de la suppression du tirage.';
+      }
+    });
+  }
 }

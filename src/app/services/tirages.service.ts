@@ -13,13 +13,18 @@ export class TiragesService {
 
   // Method for creating a new tirage
   public createTirage(): Observable<any> {
-    const url = `${this.baseUrl}/nouveauTirage`; // Append the specific endpoint
+    const url = `${this.baseUrl}/nouveauTirage`; 
     return this.http.post(url, {}, { withCredentials: true });
   }
 
   public getTirageParUser(): Observable<any> {
-    const url = `${this.baseUrl}/tirageParUser`; // Append the specific endpoint
+    const url = `${this.baseUrl}/tirageParUser`;
     return this.http.get(url, { withCredentials: true });
+  }
+
+  public deleteTirage(id: number): Observable<any> {
+    const url = `${this.baseUrl}/${id}`; 
+    return this.http.delete(url, { withCredentials: true });
   }
 
 }

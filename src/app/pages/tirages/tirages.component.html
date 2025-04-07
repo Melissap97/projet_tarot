@@ -4,10 +4,11 @@
     <div class="tirageUser">
     <ul>
       <li *ngFor="let tirage of tirages">
+        <div class="background">
         <h4>{{ tirage.carte_nom }} {{ tirage.carte_premium_nom }}</h4>
-        <p>Fait le {{tirage.createdAt | date: 'dd/MM/yyyy  HH:mm'}} </p>
+        <p>Fait le {{tirage.createdAt | date: 'dd/MM/yyyy  HH:mm'}} <button (click)="deleteTirage(tirage.id)">Supprimer</button></p>
         <p>{{ tirage.carte_signification }} {{tirage.carte_premium_signification}}</p>
-        
+        </div>
     </li>
     </ul>
 </div>

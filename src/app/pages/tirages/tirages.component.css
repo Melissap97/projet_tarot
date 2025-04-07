@@ -1,16 +1,44 @@
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+
 h3 {
     color:white;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .tirageUser{
     color: white;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    padding: 30px;;
-    background-color:#0b0313ee;
+    padding: 10px;
     border-radius: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
+.background {
+    background-color:#0b0313e1;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+    color:white;
+    background-color: #3f265ce0;
+}
+
+ul {
+    list-style: none;
 }
 
 .container {
@@ -19,11 +47,13 @@ h3 {
     box-shadow: 5px 10px 10px rgba(9, 0, 11, 0.372);
     z-index: 1000;
     position: relative;
+    list-style: none;
 }
 
 .container::-webkit-scrollbar {
     background-color: #170a25af;;
-    border-radius: 10px;;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .container::-webkit-scrollbar-thumb {
