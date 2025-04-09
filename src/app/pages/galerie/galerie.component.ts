@@ -35,8 +35,7 @@ export class GalerieComponent {
       }
       return rows;
     }
-    
-
+  
     
     
     
