@@ -7,7 +7,9 @@
     }
 }
 
-
+.userInfo{
+    position:absolute;
+}
 h3 {
     color:white;
     margin-bottom: 20px;

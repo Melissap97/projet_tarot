@@ -3,6 +3,7 @@ import { TiragesService } from './../../services/tirages.service';
 import { Component, NgZone } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-tirages',
@@ -12,25 +13,40 @@ import { RouterModule } from '@angular/router';
 })
 export class TiragesComponent {
   tirages: any[] = [];
+  userInfo: any;
   errorMessage: string = '';
 
-  constructor( private title: Title, private tiragesService: TiragesService, private NgZone: NgZone) { }
+  constructor( private title: Title, private tiragesService: TiragesService, private NgZone: NgZone, private usersService:UsersService) { }
   ngOnInit(): void {
     // Définir dynamiquement le titre de la page
     this.title.setTitle('✦ Mes tirages ✦ Projet Tarot ✦');
 
+     // Récupération de l'information de l'utilisateur
+    this.usersService.getUserInfo().subscribe({
+      next: (data) => {
+        this.userInfo = data;  // Store user info for use in the template
+      },
+      error: (error) => {
+         // Handle errors (e.g., not authenticated, no token)
+        console.error('Error fetching user info:', error);
+      }
+    }
+  );
      // Récupération dU tirage de l'utilisateur
     
     this.tiragesService.getTirageParUser().subscribe({
       next: (response) => {
-        // Assuming the response has a 'tirage' property that contains the user's tirages
-        this.tirages = response?.tirage || []; // Update tirages with the response
+        //Affiche les tirages les plus récents
+        this.tirages = (response?.tirage || []).sort((a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) => {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        });
       },
       error: (err) => {
         console.error('Error fetching tirages:', err);
         this.errorMessage = 'Erreur lors du chargement des tirages.';
       }
     });
+    
   }
 
 deleteTirage(id: number): void {

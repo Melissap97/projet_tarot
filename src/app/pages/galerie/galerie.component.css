@@ -1,43 +1,61 @@
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
 h3{
     color:white;
+    animation: fadeIn 2s ease-in-out forwards;
+    
 }
 
-/* Center the #carousel container and allow scrolling */
 #tableau {
     display: flex;
-    align-items: flex-start;  /* Align the content at the top */
+    align-items: flex-start;  
     flex-direction: column;
     width: 100%;
-    height: 80vh;            /* Full height of the viewport */
-    overflow-y: auto;         /* Allow scrolling */
-    padding: 20px;            /* Optional, adds space inside the container */
-    box-sizing: border-box;   /* Ensures padding doesn't cause overflow */
+    height: 75vh;            
+    overflow-y: auto;         
+    padding: 20px;            
+    box-sizing: border-box; 
+    animation: fadeIn 2s ease-in-out forwards;  
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
-  /* Style the table inside #carousel */
+h4{
+    margin-bottom: 10px
+}
+
 #tableau table {
     width: auto;
     border-collapse: collapse;
-    margin: 20px auto;        /* Centers the table horizontally */
+    margin: 20px auto;       
 }
 
-  /* Style the table cells */
+
 #tableau td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
     vertical-align: top;
     color: white;
+    width:auto;
+    
 }
 
-  /* Style the images inside the table */
+
 #tableau img {
-    width: 100px;             /* Ensure images don't overflow */
-    height: auto;             /* Maintain aspect ratio */
+    width: 150px;             
+    height: auto;             
 }
 
-  /* Optional: You can add a max-width to limit table size */
+
 #tableau {
     max-width: 100%;
-    overflow-x: auto;         /* Horizontal scrolling if table overflows */
+    overflow-x: auto;         
 }

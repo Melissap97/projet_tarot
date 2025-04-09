@@ -1,5 +1,7 @@
 <h3>Vos Tirages:</h3>
-<div class="container"><div *ngIf="tirages?.length">
+
+<div class="userInfo">
+  <div class="userLoggedIn" *ngIf="userInfo"><div class="container"><div *ngIf="tirages?.length">
     
     <div class="tirageUser">
     <ul>
@@ -19,3 +21,6 @@
   <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
 </div>
 </div>
+</div>
+  <div class="userLoggedOff" *ngIf="!userInfo"><span>Connectez-vous</span> pour avoir accès à vos tirages.</div>
+  </div>

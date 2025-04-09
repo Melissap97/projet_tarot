@@ -1,15 +1,12 @@
 <h3>Galerie des cartes</h3>
 <div id="tableau">
     <table>
-      <tbody>
         <tr *ngFor="let row of getCardRows(cartes)">
           <td *ngFor="let carte of row">
-            {{ carte.nom }}
-            <br />
-            <img [src]="carte.image" class="image" alt="{{ carte.nom }}" />
-          </td>
+            <h4>{{ carte.nom }}</h4>
+            
+            <img [src]="carte.image" class="image" alt="{{ carte.nom }}"/>
+        </td>
         </tr>
-      </tbody>
     </table>
-  </div>
-  
+</div>

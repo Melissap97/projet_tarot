@@ -20,7 +20,10 @@ export class GalerieComponent {
       // Appeler la méthode pour récupérer les cartes
       this.cartesService.getCartes().subscribe({
         next: (response) => {
-          this.cartes = Array.isArray(response) ? response : [];
+          const cartesArray = Array.isArray(response) ? response : [];
+
+          // Sort cards by ascending ID
+          this.cartes = cartesArray.sort((a, b) => a.id - b.id);
         },
         error: (err) => {
           console.error('Error fetching tirages:', err);
