@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Component } from '@angular/core';
-import { CartesService } from './../../services/cartes.service';
+import { CartesService } from '../../services/cartes/cartes.service';
 
 
 @Component({
@@ -33,13 +33,10 @@ export class GalerieComponent {
 
     getCardRows(cartes: any[]): any[][] {
       const rows = [];
-      for (let i = 0; i < cartes.length; i += 7) {
-        rows.push(cartes.slice(i, i + 7));
+      for (let i = 0; i < cartes.length; i += 6) {
+        rows.push(cartes.slice(i, i + 6));
       }
       return rows;
     }
   
-    
-    
-    
 }

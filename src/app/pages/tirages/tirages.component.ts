@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { TiragesService } from './../../services/tirages.service';
+import { TiragesService } from './../../services/tirages/tirages.service';
 import { Component, NgZone } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { UsersService } from '../../services/users.service';
+import { UsersService } from '../../services/users/users.service';
 
 @Component({
   selector: 'app-tirages',

@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ConnexionService } from '../../../services/connexion.service';
+import { ConnexionService } from '../../../services/connexion/connexion.service';
 
 
 @Component({
