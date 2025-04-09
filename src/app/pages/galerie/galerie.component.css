@@ -3,43 +3,41 @@ h3{
 }
 
 /* Center the #carousel container and allow scrolling */
-#carousel {
+#tableau {
     display: flex;
-    justify-content: center;  /* Center the content horizontally */
     align-items: flex-start;  /* Align the content at the top */
     flex-direction: column;
     width: 100%;
-    height: 100vh;            /* Full height of the viewport */
-    overflow: auto;           /* Allow scrolling */
+    height: 80vh;            /* Full height of the viewport */
+    overflow-y: auto;         /* Allow scrolling */
     padding: 20px;            /* Optional, adds space inside the container */
     box-sizing: border-box;   /* Ensures padding doesn't cause overflow */
-  }
-  
+}
+
   /* Style the table inside #carousel */
-  #carousel table {
+#tableau table {
     width: auto;
     border-collapse: collapse;
     margin: 20px auto;        /* Centers the table horizontally */
-  }
-  
+}
+
   /* Style the table cells */
-  #carousel td {
+#tableau td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
     vertical-align: top;
     color: white;
-  }
-  
+}
+
   /* Style the images inside the table */
-  #carousel img {
+#tableau img {
     width: 100px;             /* Ensure images don't overflow */
     height: auto;             /* Maintain aspect ratio */
-  }
-  
+}
+
   /* Optional: You can add a max-width to limit table size */
-  #carousel {
+#tableau {
     max-width: 100%;
     overflow-x: auto;         /* Horizontal scrolling if table overflows */
-  }
-  
+}

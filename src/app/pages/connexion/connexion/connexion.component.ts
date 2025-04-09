@@ -44,7 +44,6 @@ export class ConnexionComponent {
           localStorage.setItem('token', token);
           console.log('Token saved:', token);
         }
-
         // Navigate to the home page after login
         this.router.navigate(['/accueil']);
       },
