@@ -187,5 +187,12 @@ export class CarouselComponent implements AfterViewInit {
       carte_premium_signification: ''
     };
   }
-}
 
+  deconnexion(): void {
+    // Clear the token from local storage or session storage
+    localStorage.removeItem('token'); // Or sessionStorage.removeItem('token') if you're using sessionStorage
+  
+    // Redirect to the login page or any other page you want
+    window.location.reload();
+}
+}
