@@ -1,0 +1,19 @@
+#carousel table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  #carousel td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    color: white;
+  }
+  
+  #carousel img {
+    width: 100px;
+    height: auto;
+  }
+  
