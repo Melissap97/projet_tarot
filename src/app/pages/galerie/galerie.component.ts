@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CartesService } from '../../services/cartes/cartes.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -39,4 +41,8 @@ export class GalerieComponent {
       return rows;
     }
   
-}
+private router = inject(Router);
+    pagePremium() {
+      this.router.navigate(["/galerie-premium"]); 
+    }
+  }

@@ -1,1 +1,13 @@
-<p>galerie-premium works!</p>
+<h3>Galerie des cartes</h3>
+
+<div id="tableau">
+    <h4 class="entete" (click)="pageOrigine()">Afficher les cartes d'origine</h4>
+    <table>
+        <tr *ngFor="let row of getCardRows(cartes)">
+          <td *ngFor="let carte of row">
+            <h4>{{ carte.nom }}</h4>
+            <img [src]="carte.image" class="image"/>
+        </td>
+        </tr>
+    </table>
+</div>

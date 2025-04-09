@@ -1,12 +1,12 @@
 <h3>Galerie des cartes</h3>
 
 <div id="tableau">
-    <h4 class="entete">Afficher les cartes premium</h4>
+    <h4 class="entete" (click)="pagePremium()">Afficher les cartes premium</h4>
     <table>
         <tr *ngFor="let row of getCardRows(cartes)">
           <td *ngFor="let carte of row">
             <h4>{{ carte.nom }}</h4>
-            <img [src]="carte.image" class="image" alt="{{ carte.nom }}"/>
+            <img [src]="carte.image" class="image"/>
         </td>
         </tr>
     </table>

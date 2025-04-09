@@ -7,6 +7,7 @@ import { OrigineTarotComponent } from './pages/origine-tarot/origine-tarot.compo
 import { GalerieComponent } from  './pages/galerie/galerie.component';
 import { PremiumComponent } from './pages/premium/premium.component';
 import { InscriptionComponent } from './pages/connexion/inscription/inscription.component';
+import { GaleriePremiumComponent } from './pages/galerie-premium/galerie-premium.component';
 
 export const routes: Routes = [{
 
@@ -36,6 +37,10 @@ export const routes: Routes = [{
     {
         path: "galerie",
         component: GalerieComponent,
+    },
+    {
+        path: "galerie-premium",
+        component: GaleriePremiumComponent,
     },
     {
         path: "premium",
