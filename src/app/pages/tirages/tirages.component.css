@@ -7,17 +7,27 @@
     }
 }
 
-.userInfo{
-    position:absolute;
+.userInfo {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.userLoggedOff{
+
+    font-size: 30px;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    height: 25vh;
+}
+
 
 h3 {
     color:white;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out forwards;
 }
-
-
 
 .tirageUser{
     color: white;
@@ -28,11 +38,12 @@ h3 {
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-.background {
+.background{
     background-color:#0b0313e1;
     border-radius: 10px;
     padding: 25px;
     margin-bottom: 30px;
+    box-shadow: 5px 10px 10px rgba(9, 0, 11, 0.372);
 }
 
 button {
@@ -48,9 +59,9 @@ ul {
 }
 
 .container {
-    height:  75vh; /* Or your desired height */
+    height:  65vh; /* Or your desired height */
+    width: 180vh;
     overflow-y: scroll;
-    box-shadow: 5px 10px 10px rgba(9, 0, 11, 0.372);
     z-index: 1000;
     position: relative;
     list-style: none;

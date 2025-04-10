@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { TiragesService } from './../../services/tirages/tirages.service';
-import { Component, NgZone } from '@angular/core';
+import { Component, inject, NgZone } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { UsersService } from '../../services/users/users.service';
 
 @Component({
@@ -61,4 +61,9 @@ deleteTirage(id: number): void {
       }
     });
   }
+private router = inject(Router);
+    pageConnexion () {
+      this.router.navigate(["/connexion"]); 
+    }
+  
 }
