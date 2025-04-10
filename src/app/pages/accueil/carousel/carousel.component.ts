@@ -1,5 +1,6 @@
 import { UsersService } from './../../../services/users/users.service';
 import { TiragesService } from './../../../services/tirages/tirages.service';
+import { ConnexionService } from '../../../services/connexion/connexion.service';
 import { Component, AfterViewInit, NgZone, inject } from '@angular/core';
 import $ from 'jquery';
 import { Title } from '@angular/platform-browser';
@@ -32,7 +33,7 @@ export class CarouselComponent implements AfterViewInit {
   }
 
 
-  constructor( private title: Title, private tiragesService: TiragesService,private usersService: UsersService, private NgZone: NgZone) { }
+  constructor( private title: Title, private tiragesService: TiragesService,private usersService: UsersService, private connexionService: ConnexionService, private NgZone: NgZone) { }
     ngOnInit(): void {
       // Définir dynamiquement le titre de la page
       this.title.setTitle('✦ Accueil ✦ Projet Tarot ✦');
@@ -190,9 +191,20 @@ export class CarouselComponent implements AfterViewInit {
 
   deconnexion(): void {
     // Clear the token from local storage or session storage
-    localStorage.removeItem('token'); // Or sessionStorage.removeItem('token') if you're using sessionStorage
-  
-    // Redirect to the login page or any other page you want
+    this.connexionService.logout().subscribe({
+      next: (response) => { 
+    // Clear client-side storage just in case
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Optionally show a toast or console message
+    console.log('Logged out successfully');
+
     window.location.reload();
+  },
+  error: (err) => {
+    console.error('Logout failed:', err);
+  }
+});
 }
 }

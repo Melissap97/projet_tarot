@@ -20,4 +20,8 @@ export class ConnexionService {
   public register(userData: { nom: string; email: string; password: string}): Observable<any> {
     return this.httpClient.post(this.url + this.path + '/register', userData);
   }
+
+  public logout(): Observable<any> {
+    return this.httpClient.post(this.url + this.path + '/logout', {}, { withCredentials: true });
+  }
 }

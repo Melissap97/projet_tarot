@@ -42,7 +42,6 @@ export class ConnexionComponent {
         const token = response?.token; // Make sure the token field matches your API response
         if (token) {
           localStorage.setItem('token', token);
-          console.log('Token saved:', token);
         }
         // Navigate to the home page after login
         this.router.navigate(['/accueil']);
