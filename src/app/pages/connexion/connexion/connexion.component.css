@@ -3,14 +3,17 @@ h2, label{
     margin-bottom: 10px;
 }
 
-p{
+.inscription {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 20%;
-    font-size: 24px;
+    font-size: 20px;
     color: white;   
     cursor: pointer;
     animation: fadeIn 2s ease-in-out forwards;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    text-align: right;  /* Align the text to the right */
+    width: 78%;        /* Ensure the <h4> takes up full width */
+    margin: 0;          /* Remove any default margin */
+    padding-right: 11px;
 
 }
 
@@ -69,7 +72,7 @@ input, textarea{
 
 button {
     border-radius: 10px;
-    padding: 10px;
+    padding: 4px;
     color:white;
     background-color: #3f265ce0;
 }
