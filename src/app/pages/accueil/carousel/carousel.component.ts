@@ -189,22 +189,6 @@ export class CarouselComponent implements AfterViewInit {
     };
   }
 
-  deconnexion(): void {
-    // Clear the token from local storage or session storage
-    this.connexionService.logout().subscribe({
-      next: (response) => { 
-    // Clear client-side storage just in case
-    localStorage.clear();
-    sessionStorage.clear();
-
-    // Optionally show a toast or console message
-    console.log('Logged out successfully');
-
-    window.location.reload();
-  },
-  error: (err) => {
-    console.error('Logout failed:', err);
-  }
-});
+  
 }
-}
+

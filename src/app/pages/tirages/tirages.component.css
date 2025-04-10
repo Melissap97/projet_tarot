@@ -11,8 +11,15 @@
     position: absolute;
     top: 62%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: left;  /* Add this line to center the text */
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    position: absolute;       /* To position it absolutely within the parent */
+  transform: translate(-50%, -50%);  /* Adjust to perfectly center it */
+    width: 100%;   
 }
+
 
 .userLoggedOff{
 

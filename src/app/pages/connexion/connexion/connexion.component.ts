@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ConnexionService } from '../../../services/connexion/connexion.service';
 
 
+
 @Component({
   selector: 'app-connexion',
   imports: [CommonModule, ReactiveFormsModule],
@@ -44,7 +45,10 @@ export class ConnexionComponent {
           localStorage.setItem('token', token);
         }
         // Navigate to the home page after login
-        this.router.navigate(['/accueil']);
+        this.router.navigate(['/accueil']).then(() => {
+          // Reload the page after navigation
+          window.location.reload();
+        });
       },
       error: (err: any) => {
         this.errorMessage = err.error.message || 'Erreur de connexion';

@@ -19,26 +19,31 @@
   }
 }
 
+
 .userInfo {
   position: absolute;
-  top: 10px;
-  left: 150px;
+  top: 0;             /* align to top */
+  right: 0;           /* align to right */
+  padding: 10px 20px; /* optional spacing from edges */
   color: white;
   font-family: 'Times New Roman', Times, serif;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* right-align inner content */
+  gap: 5px;       /* optional, default behavior */
 }
 
-.deconnexion{
-  cursor:pointer;
-}
+
 .deconnexion:hover{
   text-decoration: underline;
 }
+
 span{
   text-decoration: underline;
 }
 .userLoggedOff{
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
 #carousel {
