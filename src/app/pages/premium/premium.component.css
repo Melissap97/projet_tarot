@@ -1,0 +1,99 @@
+
+h2, label{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.inscription {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;   
+    cursor: pointer;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    text-align: right;  /* Align the text to the right */
+    width: 78%;        /* Ensure the <h4> takes up full width */
+    margin: 0;          /* Remove any default margin */
+    padding-right: 11px;
+
+}
+
+p:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    padding:0px;
+    margin:0px;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    animation: fadeIn 1s ease-in-out forwards;
+    text-align: center;
+    font-style: normal;
+}
+
+.container {
+    background-color: #1c0f2be0;
+    min-height: fit-content; 
+    border-radius: 25px;
+    padding: 20px;
+    z-index: 1000;
+    position: absolute;
+    box-shadow: 5px 10px 10px rgba(9, 0, 11, 0.372);
+    width: 50%;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+input {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #3f265ce0;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+input, textarea{
+    color: white;
+}
+
+
+button {
+    border-radius: 10px;
+    padding: 4px;
+    color:white;
+    background-color: #3f265ce0;
+}
+
+@media (min-width: 1900px) {
+
+    .container {
+        width: 40%;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+    }
+    .connexion{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;   
+    }
+    .connexion p {
+        font-size: 26px;
+        top:30%;
+        margin-top:25px
+    }
+}

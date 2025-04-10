@@ -7,8 +7,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class UsersService {
-url = environment.apiUrl
-  path = "/users/userInfo"
+  private baseUrl = `${environment.apiUrl}/users`; 
   constructor(private httpClient: HttpClient) { }
 
   public getUserInfo(): Observable<any> {
@@ -19,6 +18,17 @@ url = environment.apiUrl
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
     // Make the GET request to the backend route and return the observable
-    return this.httpClient.get(this.url + this.path, { headers });
+    const url = `${this.baseUrl}/userInfo`;
+    return this.httpClient.get(url , { headers });
   }
+
+  public premium(): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    const url = `${this.baseUrl}/modify`;
+    
+    // Put request with null body but with headers
+    return this.httpClient.put(url, null, { headers, withCredentials: true });
+  }
+  
 }
