@@ -21,20 +21,16 @@
 }
 
 
-.userLoggedOff{
 
-    font-size: 30px;
-    animation: fadeIn 2s ease-in-out forwards;
-    text-shadow: rgb(255, 255, 255) 1px 0 10px;
-    height: 25vh;
-}
 
-.noTiragesMessage{
+.noTiragesMessage, .userLoggedOff{
     font-size: 30px;
     animation: fadeIn 2s ease-in-out forwards;
     text-shadow: rgb(255, 255, 255) 1px 0 10px;
     text-align: center;
     padding-top: 10%;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
