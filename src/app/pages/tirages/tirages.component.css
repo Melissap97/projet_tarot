@@ -16,7 +16,7 @@
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
     position: absolute;       /* To position it absolutely within the parent */
-  transform: translate(-50%, -50%);  /* Adjust to perfectly center it */
+    transform: translate(-50%, -50%);  /* Adjust to perfectly center it */
     width: 100%;   
 }
 
@@ -27,6 +27,14 @@
     animation: fadeIn 2s ease-in-out forwards;
     text-shadow: rgb(255, 255, 255) 1px 0 10px;
     height: 25vh;
+}
+
+.noTiragesMessage{
+    font-size: 30px;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    text-align: center;
+    padding-top: 10%;
 }
 
 
@@ -68,7 +76,7 @@ ul {
 .container {
     height:  65vh; /* Or your desired height */
     width: 180vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 1000;
     position: relative;
     list-style: none;
