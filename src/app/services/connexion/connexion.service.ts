@@ -14,11 +14,11 @@ export class ConnexionService {
   constructor(private httpClient: HttpClient) { }
 
   public login(loginForm: FormGroup): Observable<any> {
-    return this.httpClient.post(this.url + this.path + '/login', loginForm.value, { withCredentials: true })
+    return this.httpClient.post(this.url + this.path + '/login', loginForm.value, { withCredentials: true });
   }
 
   public register(userData: { nom: string; email: string; password: string}): Observable<any> {
-    return this.httpClient.post(this.url + this.path + '/register', userData);
+    return this.httpClient.post(this.url + this.path + '/register', userData, { withCredentials: true });
   }
 
   public logout(): Observable<any> {
