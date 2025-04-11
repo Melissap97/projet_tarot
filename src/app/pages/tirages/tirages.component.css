@@ -111,4 +111,14 @@ ul {
         list-style: none;
     }
 
+    .noTiragesMessage, .userLoggedOff{
+        font-size: 35px;
+        animation: fadeIn 2s ease-in-out forwards;
+        text-shadow: rgb(255, 255, 255) 1px 0 10px;
+        text-align: center;
+        padding-top: 20%;
+        color:white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
 }
