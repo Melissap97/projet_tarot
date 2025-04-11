@@ -64,7 +64,6 @@ private router = inject(Router);
     localStorage.clear();
     sessionStorage.clear();
 
-    
     this.router.navigate(['/accueil']).then(() => {
       // Reload the page after navigation
       window.location.reload();

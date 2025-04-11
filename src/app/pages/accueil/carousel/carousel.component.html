@@ -3,7 +3,6 @@
     <div class="userLoggedIn" *ngIf="userInfo">Bienvenue, {{  userInfo.nom }}.</div>
     <div class="userLoggedOff" *ngIf="!userInfo" (click)="pageConnexion()"><span>Connectez-vous</span> pour enregistrer vos tirages.</div>
     <div class="userPremium" *ngIf="userInfo && userInfo.premium">⭐ Premium ⭐</div>
-    
     </div>
 </header>
 

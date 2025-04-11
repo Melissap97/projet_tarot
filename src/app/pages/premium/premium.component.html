@@ -1,14 +1,19 @@
 <h2>Devenir premium</h2>
-<div class ="premium">
-    <div class="container">
-    <form>
-        <label>Nom de famille:</label>
-        <input type="text"  />
-        <label>Info carte bancaire:</label>
-        <input type="number"  />
+<div class="premium">
+    <div class="container" *ngIf="userInfo; else noUserInfo">
+        <form>
+            <label>Nom de famille:</label>
+            <input type="text"  />
+            <label>Info carte bancaire:</label>
+            <input type="number"  />
         
-        <button (click)="premium()">Devenir premium</button>
-    </form>
+            <button (click)="premium()">Devenir premium</button>
+        </form>
+    </div>
 
-</div>
+    <ng-template #noUserInfo>
+        <div class="noPremium">
+            <p>Veuillez vous connecter pour devenir premium.</p>
+        </div>
+    </ng-template>
 </div>
