@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { UsersService } from '../../services/users/users.service';
@@ -36,7 +36,8 @@ constructor( private title: Title, private usersService: UsersService, private r
         error: (err: any) => this.errorMessage = err.error.message || 'Erreur lors de l\'inscription'
       });
     }
-      
-      }
-    
   
+  pageConnexion () {
+    this.router.navigate(["/connexion"]); 
+  }
+}

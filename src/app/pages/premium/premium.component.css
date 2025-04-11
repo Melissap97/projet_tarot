@@ -20,6 +20,7 @@ h2, label{
 
 p:hover {
     text-decoration: underline;
+    cursor:pointer;
 }
 
 h2 {
@@ -115,5 +116,6 @@ button {
         padding-top: 15%;
         color:white;
         font-family: 'Times New Roman', Times, serif;
+        
     }
 }

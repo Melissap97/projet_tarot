@@ -7,4 +7,20 @@
 p{
     color:white;
     font-family: 'Times New Roman', Times, serif;
+    animation: none;
+}
+
+h2{
+    color: white;
+}
+
+.background{
+    background-color:#170a25f3;    
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: relative;
+
 }
