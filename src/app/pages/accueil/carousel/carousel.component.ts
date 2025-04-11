@@ -125,13 +125,14 @@ export class CarouselComponent implements AfterViewInit {
       next: (response) => {
         console.log('API Response:', response);
   
-        // Check if there's a token or user logged in (you can adjust this as needed)
-        const token = localStorage.getItem('token'); // Or sessionStorage.getItem('token') if you're using sessionStorage
+        // Obtient le token
+        const token = localStorage.getItem('token'); 
   
         if (token) {
-          // If there's a token, assume the user is logged in and fetch the premium tirage
+          // Si il y a un token, le récupère
           const tirage = response?.tirage;
-  
+
+          //NGZone force Angular à vérifier si il y a une modification
           this.NgZone.run(() => {
             this.tirageInfo = {
               id: tirage?.id || '',
@@ -148,20 +149,20 @@ export class CarouselComponent implements AfterViewInit {
             }; 
           });
         } else {
-          // If no token, use the normal tirage
+          // Si pas de token, faire un tirage normal non premium seulement
           this.NgZone.run(() => {
             this.tirageInfo = {
               id: response?.carte?.id || '',
-              utilisateur_id: '', // Empty if not needed for normal card
+              utilisateur_id: '', 
               carte_id: response?.carte?.id || '',
-              createdAt: '', // Empty if not needed for normal card
+              createdAt: '', 
               carte_nom: response?.carte?.nom || '',
               carte_signification: response?.carte?.signification || '',
               carte_image: response?.carte?.image || '',
-              carte_premium_id: '', // Empty for normal card
-              carte_premium_nom: '', // Empty for normal card
-              carte_premium_image: '', // Empty for normal card
-              carte_premium_signification: '' // Empty for normal card
+              carte_premium_id: '', 
+              carte_premium_nom: '',
+              carte_premium_image: '', 
+              carte_premium_signification: '' 
             }; 
           });
         }
@@ -174,6 +175,7 @@ export class CarouselComponent implements AfterViewInit {
   
 
   closeTirageInfo(): void {
+    //reset la div tirageInfo en vidant les informations
     this.tirageInfo = {
       id: '',
       utilisateur_id: '',
@@ -188,7 +190,5 @@ export class CarouselComponent implements AfterViewInit {
       carte_premium_signification: ''
     };
   }
-
-  
 }
 
