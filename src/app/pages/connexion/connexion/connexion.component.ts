@@ -39,14 +39,14 @@ export class ConnexionComponent {
       next: (response) => {
         console.log('Login successful, saving token...');
         
-        // Assuming the token is in the response
-        const token = response?.token; // Make sure the token field matches your API response
+        // Déclare le token s'il est présent
+        const token = response?.token; 
         if (token) {
           localStorage.setItem('token', token);
         }
-        // Navigate to the home page after login
+        // Retourne a l'accueil
         this.router.navigate(['/accueil']).then(() => {
-          // Reload the page after navigation
+          // Refresh la page
           window.location.reload();
         });
       },
@@ -56,7 +56,6 @@ export class ConnexionComponent {
     });
   }
 }
-
   pageInscription () {
     this.router.navigate(["/inscription"]); 
   }

@@ -22,20 +22,19 @@ export class SidebarComponent {
 
 
   ngOnInit(): void {
-    
     // Récupération de l'information de l'utilisateur
     this.usersService.getUserInfo().subscribe({
       next: (data) => {
-        this.userInfo = data;  // Store user info for use in the template
+        // Store l'info de l'user pour le template
+        this.userInfo = data; 
       },
       error: (error) => {
-         // Handle errors (e.g., not authenticated, no token)
         console.error('Error fetching user info:', error);
       }
     }
   );
 }
-  //Sert à la navigation entre les routes et permettre leur sécurité. Lié avec html
+  //N avigation entre les routes
 private router = inject(Router);
   pageAccueil () {
     this.router.navigate(["/accueil"]); 
@@ -57,15 +56,14 @@ private router = inject(Router);
   }
 
   deconnexion(): void {
-    // Clear the token from local storage or session storage
     this.connexionService.logout().subscribe({
       next: (response) => { 
-    // Clear client-side storage just in case
+    // Supprime les tokens
     localStorage.clear();
     sessionStorage.clear();
 
     this.router.navigate(['/accueil']).then(() => {
-      // Reload the page after navigation
+      // Refresh la page
       window.location.reload();
     });
   },

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './galerie-premium.component.css'
 })
 export class GaleriePremiumComponent {
-cartes: any[] = []; // Array to hold the cards
+cartes: any[] = []; // Crée un array vide pour les cartes
   constructor( private title: Title, private cartesService: CartesService) { }
     ngOnInit(): void {
       // Définir dynamiquement le titre de la page
@@ -22,7 +22,7 @@ cartes: any[] = []; // Array to hold the cards
         next: (response) => {
           const cartesArray = Array.isArray(response) ? response : [];
 
-          // Sort cards by ascending ID
+          // Organise les cartes par ID croissant 
           this.cartes = cartesArray.sort((a, b) => a.id - b.id);
         },
         error: (err) => {
@@ -33,6 +33,7 @@ cartes: any[] = []; // Array to hold the cards
 
     getCardRows(cartes: any[]): any[][] {
       const rows = [];
+      //Crée un loop de 6 rows
       for (let i = 0; i < cartes.length; i += 6) {
         rows.push(cartes.slice(i, i + 6));
       }

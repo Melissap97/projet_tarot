@@ -32,11 +32,11 @@ h4{
     font-family: 'Times New Roman', Times, serif;
 }
 .entete{
-    text-align: right;  /* Align the text to the right */
-    width: 100%;        /* Ensure the <h4> takes up full width */
-    margin: 0;          /* Remove any default margin */
+    text-align: right; 
+    width: 100%;       
+    margin: 0;          
     padding-right: 11px;  
-    cursor:pointer; /* Change cursor to pointer */
+    cursor:pointer;
 }
 
 .entete:hover{
@@ -58,7 +58,6 @@ h4{
     vertical-align: top;
     color: white;
     width:auto;
-    
 }
 
 

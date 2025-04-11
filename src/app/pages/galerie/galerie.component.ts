@@ -13,18 +13,18 @@ import { Router } from '@angular/router';
   styleUrl: './galerie.component.css'
 })
 export class GalerieComponent {
-  cartes: any[] = []; // Array to hold the cards
+  cartes: any[] = []; // Crée un array vide de cartes
   constructor( private title: Title, private cartesService: CartesService) { }
     ngOnInit(): void {
       // Définir dynamiquement le titre de la page
       this.title.setTitle('✦ Galerie ✦ Projet Tarot ✦');
 
-      // Appeler la méthode pour récupérer les cartes
+      // Appele la méthode pour récupérer les cartes
       this.cartesService.getCartes().subscribe({
         next: (response) => {
           const cartesArray = Array.isArray(response) ? response : [];
 
-          // Sort cards by ascending ID
+          // Organise les cartes par ID
           this.cartes = cartesArray.sort((a, b) => a.id - b.id);
         },
         error: (err) => {
@@ -35,6 +35,7 @@ export class GalerieComponent {
 
     getCardRows(cartes: any[]): any[][] {
       const rows = [];
+      //Crée un loop pour afficher toutes les cartes en 6 rows
       for (let i = 0; i < cartes.length; i += 6) {
         rows.push(cartes.slice(i, i + 6));
       }

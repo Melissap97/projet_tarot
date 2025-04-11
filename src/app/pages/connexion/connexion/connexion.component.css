@@ -10,11 +10,10 @@ h2, label{
     cursor: pointer;
     animation: fadeIn 2s ease-in-out forwards;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    text-align: right;  /* Align the text to the right */
-    width: 78%;        /* Ensure the <h4> takes up full width */
-    margin: 0;          /* Remove any default margin */
+    text-align: right;  
+    width: 78%;      
+    margin: 0;        
     padding-right: 11px;
-
 }
 
 p:hover {

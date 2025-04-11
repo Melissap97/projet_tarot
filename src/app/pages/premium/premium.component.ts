@@ -21,10 +21,9 @@ constructor( private title: Title, private usersService: UsersService, private r
 
     this.usersService.getUserInfo().subscribe({
       next: (data) => {
-        this.userInfo = data;  // Store user info for use in the template
+        this.userInfo = data;  // Store userInfo dans le template
       },
       error: (error) => {
-         // Handle errors (e.g., not authenticated, no token)
         console.error('Error fetching user info:', error);
       }
     });

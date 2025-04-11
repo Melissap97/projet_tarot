@@ -24,10 +24,9 @@ export class TiragesComponent {
      // Récupération de l'information de l'utilisateur
     this.usersService.getUserInfo().subscribe({
       next: (data) => {
-        this.userInfo = data;  // Store user info for use in the template
+        this.userInfo = data;  // Store userInfo dans le template
       },
       error: (error) => {
-         // Handle errors (e.g., not authenticated, no token)
         console.error('Error fetching user info:', error);
       }
     }
@@ -52,7 +51,7 @@ export class TiragesComponent {
 deleteTirage(id: number): void {
     this.tiragesService.deleteTirage(id).subscribe({
       next: (response) => {
-        // Remove the deleted tirage from the list
+        // Enlève les tirages supprimés de la liste
         this.tirages = this.tirages.filter(tirage => tirage.id !== id);
       },
       error: (err) => {

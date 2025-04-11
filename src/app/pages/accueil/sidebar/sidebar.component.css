@@ -1,8 +1,7 @@
-/* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
+    left: -250px;
     width: 250px;
     height: 100%;
     background: #1c0f2bb9;
@@ -16,7 +15,6 @@
     left: 0;
   }
   
-  /* Sidebar Links */
   .sidebar p {
     display: block;
     color: white;
@@ -29,17 +27,14 @@
     margin: 0px;
     text-align: left; 
     font-style: italic;
-    text-shadow: rgb(255, 255, 255) 1px 0 10px;
-    
+    text-shadow: rgb(255, 255, 255) 1px 0 10px; 
   }
   
   .sidebar p:hover {
     background: #381f6197;
     cursor: pointer;
-
   }
   
-  /* Hamburger Button */
   .hamburger {
     position: fixed;
     top: 15px;

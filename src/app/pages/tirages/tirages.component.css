@@ -11,12 +11,12 @@
     position: absolute;
     top: 62%;
     left: 50%;
-    text-align: left;  /* Add this line to center the text */
+    text-align: left;  
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    position: absolute;       /* To position it absolutely within the parent */
-    transform: translate(-50%, -50%);  /* Adjust to perfectly center it */
+    justify-content: center; 
+    align-items: center;      
+    position: absolute;     
+    transform: translate(-50%, -50%); 
     width: 100%;   
 }
 
@@ -67,7 +67,7 @@ ul {
 }
 
 .container {
-    height:  65vh; /* Or your desired height */
+    height:  65vh; 
     width: 180vh;
     overflow-y: auto;
     z-index: 1000;
@@ -93,17 +93,17 @@ ul {
         position: absolute;
         top: 55%;
         left: 50%;
-        text-align: left;  /* Add this line to center the text */
+        text-align: left;
         display: flex;
-        justify-content: center;  /* Center horizontally */
-        align-items: center;      /* Center vertically */
-        position: absolute;       /* To position it absolutely within the parent */
-        transform: translate(-50%, -50%);  /* Adjust to perfectly center it */
+        justify-content: center;  
+        align-items: center;      
+        position: absolute;     
+        transform: translate(-50%, -50%); 
         width: 100%;   
     }
 
     .container {
-        height:  75vh; /* Or your desired height */
+        height:  75vh; 
         width: 180vh;
         overflow-y: auto;
         z-index: 1000;
@@ -120,5 +120,4 @@ ul {
         color:white;
         font-family: 'Times New Roman', Times, serif;
     }
-
 }
