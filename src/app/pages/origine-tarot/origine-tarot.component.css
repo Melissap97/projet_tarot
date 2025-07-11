@@ -4,10 +4,11 @@
     text-align: center;
 }
 
-p{
+p, ul{
     color:white;
     font-family: 'Times New Roman', Times, serif;
     animation: none;
+    font-size: 20px;
 }
 
 h2, h3{

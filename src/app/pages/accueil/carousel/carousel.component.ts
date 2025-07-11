@@ -58,7 +58,7 @@ export class CarouselComponent implements AfterViewInit {
 
   // Code du carousel
   private initializeCarousel(): void {
-    this.moveToSelected("next"); // Example to trigger the movement
+    this.moveToSelected('next'); // Example to trigger the movement
     // Listen to keyboard events
     $(document).keydown((e: JQuery.Event) => {
       switch (e.which) {
@@ -74,17 +74,43 @@ export class CarouselComponent implements AfterViewInit {
       e.preventDefault();
     });
     // Change from 'click' to 'mouseenter' and 'mouseleave' for hover effect
-    $('#carousel div').on('mouseenter', 
-      (event) => {
+    $('#carousel div')
+      .on('mouseenter', (event) => {
         // Type casting event.currentTarget to HTMLElement
         const target = event.currentTarget as HTMLElement;
         this.moveToSelected($(target));
-      }).on('mouseleave', 
-      () => {
+      })
+      .on('mouseleave', () => {
         // Optional: Reset or perform any action on mouse leave
         // You can add something here if needed when the mouse leaves the element
+      });
+    // Touch support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleGesture = () => {
+      if (touchEndX < touchStartX - 50) {
+        // Swipe left
+        this.moveToSelected('next');
       }
-    );
+      if (touchEndX > touchStartX + 50) {
+        // Swipe right
+        this.moveToSelected('prev');
+      }
+    };
+
+    // Add event listeners to the carousel container
+    const carousel = document.getElementById('carousel');
+    if (carousel) {
+      carousel.addEventListener('touchstart', (e: TouchEvent) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      carousel.addEventListener('touchend', (e: TouchEvent) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleGesture();
+      });
+    }
   }
   private moveToSelected(element: JQuery<HTMLElement> | "next" | "prev"): void {
     let selected: JQuery<HTMLElement>;
