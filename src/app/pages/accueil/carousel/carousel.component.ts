@@ -41,11 +41,10 @@ export class CarouselComponent implements AfterViewInit {
       // Récupération de l'information de l'utilisateur
       this.usersService.getUserInfo().subscribe({
         next: (data) => {
-          this.userInfo = data;  // Store user info for use in the template
+          this.userInfo = data; 
         },
         error: (error) => {
-           // Handle errors (e.g., not authenticated, no token)
-          console.error('Error fetching user info:', error);
+          console.error('Erreur lors de la récupération du userInfo:', error);
         }
       }
     );
@@ -73,16 +72,14 @@ export class CarouselComponent implements AfterViewInit {
       }
       e.preventDefault();
     });
-    // Change from 'click' to 'mouseenter' and 'mouseleave' for hover effect
+    // Evènements de la souris
     $('#carousel div')
       .on('mouseenter', (event) => {
-        // Type casting event.currentTarget to HTMLElement
         const target = event.currentTarget as HTMLElement;
         this.moveToSelected($(target));
       })
       .on('mouseleave', () => {
-        // Optional: Reset or perform any action on mouse leave
-        // You can add something here if needed when the mouse leaves the element
+       
       });
     // Touch support for mobile
     let touchStartX = 0;
@@ -157,8 +154,7 @@ export class CarouselComponent implements AfterViewInit {
         if (token) {
           // Si il y a un token, le récupère
           const tirage = response?.tirage;
-
-          //NGZone force Angular à vérifier si il y a une modification
+          // Si le tirage est premium, on le stocke dans tirageInfo
           this.NgZone.run(() => {
             this.tirageInfo = {
               id: tirage?.id || '',

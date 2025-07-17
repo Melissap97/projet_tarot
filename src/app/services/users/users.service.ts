@@ -11,13 +11,11 @@ export class UsersService {
   constructor(private httpClient: HttpClient) { }
 
   public getUserInfo(): Observable<any> {
-    // Get the token from localStorage or cookie (depending on how you store it after login)
-    const token = localStorage.getItem('token'); // Replace with the actual token storage method
-
-    // Set the Authorization header with the token
+    // Obtiens le cookie depuis le localstorage
+    const token = localStorage.getItem('token'); 
+    // Met l'authentification dans les headers
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-
-    // Make the GET request to the backend route and return the observable
+    // Fait la requête GET pour obtenir les informations de l'utilisateur
     const url = `${this.baseUrl}/userInfo`;
     return this.httpClient.get(url , { headers });
   }
