@@ -16,10 +16,7 @@
             "outputPath": "dist/projet_tarot/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -31,11 +28,8 @@
               "src/styles.css",
               "src/app/pages/accueil/carousel/carousel.component.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-              
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
-            ]
+            "scripts": ["node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
             "production": {
