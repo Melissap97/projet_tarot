@@ -15,4 +15,4 @@ COPY --from=builder /app/dist/projet_tarot/ /usr/share/nginx/html
 # Exposition du port 80
 EXPOSE 80
 # Démarrage de Nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"] 
